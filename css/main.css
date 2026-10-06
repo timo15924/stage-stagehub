@@ -1,0 +1,372 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Knoppen */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-add {
+  margin: 20px;
+  background: #0eec88;
+  color: #333;
+}
+.btn-success {
+  background: #0eec88;
+  color: #333;
+}
+.btn-warning {
+  background: #f0ad4e;
+  color: #fff;
+}
+.btn-danger {
+  background: #d9534f;
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-form {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Container voor 2 kolommen */
+.vacature-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  height: 85vh;
+  
+    margin-top: -26px;
+    /* Voeg de juiste positionering en z-index toe */
+    position: relative;
+    z-index: 2;
+    /* De hogere z-index zorgt ervoor dat deze sectie bovenop komt te liggen */
+    background: linear-gradient(to bottom, transparent 0%, var(--light_cyan) 5%, var(--light_cyan) 95%, transparent 100%);
+
+}
+
+/* Linker lijst (1 deel) */
+.job-listings {
+  flex: 1; /* neemt 1 deel van de ruimte */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Rechter detailvak (2 delen = dubbel zo breed) */
+.job-detail {
+  flex: 2; /* neemt 2 delen van de ruimte */
+  background-color: #F5FFFE;
+  border: 2px solid #0eec88;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  height: 100%;
+  overflow-y: auto;
+  display: none; /* Standaard verborgen */
+  flex-direction: row-reverse;
+  justify-content: space-around;
+
+}
+.job-detail h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+.job-detail p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Vacature kaarten */
+.job-card {
+  background-color: #F5FFFE;
+  border-left: 5px solid #0eec88;
+  border-right: 5px solid #0eec88;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.job-card:hover {
+  transform: translateY(-2px) translateX(2px);
+  background-color: #D0FFFB;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+.job-description {
+  margin-bottom: 15px;
+  color: #555;
+}
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+}
+.job-location {
+  font-size: 1rem;
+  color: #666;
+}
+.job-types {
+  display: flex;
+  gap: 10px;
+}
+.job-type {
+  background-color: #41BFB3;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Nieuwe CSS voor detailpaneel */
+.section-title {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.job-detail-header {
+  padding-bottom: 20px;
+      margin-bottom: 4vh;
+  border-bottom: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: min-content;
+}
+.job-detail .job-title-detail {
+  margin-left: 1vw;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.job-detail .meta-row {
+  margin-left: 1vw;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.job-detail .meta-row b {
+  color: #666;
+  min-width: 120px;
+}
+.job-info {
+    display: flex;
+    margin-top: 20px;
+    width: 25vw;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.job-info-section {
+  margin-bottom: 25px;
+}
+.job-info-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.job-info-section p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.status.open {
+  color: #0eec88;
+  font-weight: bold;
+}
+
+
+/* ============================================
+   RESPONSIVE LAYOUT - MOBIEL & TABLETS
+   ============================================ */
+
+/* -------- 1200px: Laptops en kleinere schermen -------- */
+@media (max-width: 1200px) {
+    .vacature-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .job-detail {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* -------- 900px: Tablets -------- */
+@media (max-width: 900px) {
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .input-field-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .vacature-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .job-info {
+        width: 100%;
+    }
+}
+
+/* --------- 600px: TELEFOON LAYOUT -------- */
+@media (max-width: 600px) {
+
+    body {
+        background: #fff;
+    }
+
+    /* HERO → filters wat compacter */
+    .hero-section {
+        background-position: center !important;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .search-form {
+        width: 100%;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    /* FILTERVELDEN */
+    .input-field-wrapper {
+        width: 100% !important;
+    }
+
+    .search-input,
+    select {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* VACATURE CONTAINER NAAR 1 KOLOM */
+    .vacature-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .job-listings {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .job-card {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        padding: 15px;
+    }
+
+    .job-card h2 {
+        font-size: 1.2rem;
+    }
+
+    /* DETAILPANEEL → VOLLEDIG SCHERM OP MOBIEL */
+    .job-detail {
+        display: none;
+        flex-direction: column !important;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background: #ffffff;
+        box-shadow: none;
+    }
+
+    /* wanneer een kaart actief is → detailpaneel tonen */
+    .job-listings.details-open {
+        display: none;
+    }
+
+    .job-detail.mobile-open {
+        display: block !important;
+    }
+
+    /* TITELS */
+    .job-detail .job-title-detail {
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+
+    .job-info {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* STATISCHE KLASSE TOEVOEGEN VOOR MOBIEL (JS GEBRUIKT DIT) */
+.mobile-open {
+    display: block !important;
+}

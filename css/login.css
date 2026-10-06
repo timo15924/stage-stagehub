@@ -1,0 +1,218 @@
+#login {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Roboto', 'Inter', sans-serif;
+  background-image: url('../images/background-login.jpg');
+  color: #333;
+}
+
+#login #form {
+  width: 350px;
+  height: 500px;
+  background: #F5FFFE;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0eec88;
+}
+
+#login #chk {
+  display: none;
+}
+
+#login .login {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#login label {
+  color: #333;
+  font-size: 2em;
+  justify-content: center;
+  display: flex;
+  margin: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+
+#login input {
+  width: 60%;
+  height: 10px;
+  background: #fff;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#login button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #333;
+  background-color: #0eec88;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#login button:hover {
+  background-color: #7fffc3;
+}
+
+#login .signup {
+  height: 460px;
+  background: #D0FFFB;
+  border-radius: 60% / 10%;
+  transform: translateY(-160px);
+  transition: .8s ease-in-out;
+}
+
+#login .signup label {
+  padding-top: 20px;
+  color: #333;
+  transform: scale(.6);
+}
+
+#login #chk:checked ~ .signup {
+  transform: translateY(-490px);
+}
+
+#login #chk:checked ~ .signup label {
+  transform: scale(1);
+}
+
+#login #chk:checked ~ .login label {
+  transform: scale(.6);
+}
+
+#login .error-message {
+  color: #d9534f;
+  margin-top: 5px;
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+#login .error-icon {
+  color: #d9534f;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+
+#admin {
+  background: #fff;
+  font-family: 'Roboto', 'Inter', sans-serif; 
+  margin: 0;
+  color: #333;
+}
+
+#admin .container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #F5FFFE;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 60, 180, 0.08);
+  padding: 32px;
+}
+
+#admin h1 {
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2.2em;
+}
+
+#admin table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+#admin th,
+#admin td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e3eaf3;
+  text-align: left;
+}
+
+#admin th {
+  background: #eaf3fb;
+  color: black;
+  font-weight: 700;
+}
+
+#admin tr:hover td {
+  background: #f0f6ff;
+}
+
+#admin .actions a {
+  color: black;
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 500;
+}
+
+#admin .actions a.delete {
+  color: #d32f2f;
+}
+
+#admin .form-section {
+  background: #eaf3fb;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+#admin label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+  font-weight: 500;
+}
+
+#admin input[type="text"],
+#admin textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bcd4f6;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1em;
+}
+
+#admin button {
+  background: #0eec88;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#admin button:hover {
+  background: #7fffc3;
+}
